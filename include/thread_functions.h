@@ -18,4 +18,10 @@ struct AverageData {
     double averageValue;
 };
 
+DWORD WINAPI MinMaxThread(LPVOID lpParam);
+DWORD WINAPI AverageThread(LPVOID lpParam);
+
+void PrintArray(const int* array, int size, const char* message);
+bool CheckArraySize(int size);
+
 #endif // THREAD_FUNCTIONS_H
