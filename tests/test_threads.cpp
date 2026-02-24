@@ -132,17 +132,17 @@ TEST(AverageThreadTest, InvalidArrayPointer) {
 
 // Тест функции ValidateArrayInput
 TEST(ValidationTest, ValidSize) {
-    EXPECT_TRUE(ValidateArrayInput(1));
-    EXPECT_TRUE(ValidateArrayInput(10));
-    EXPECT_TRUE(ValidateArrayInput(100));
-    EXPECT_TRUE(ValidateArrayInput(1000));
+    EXPECT_TRUE(CheckArraySize(1));
+    EXPECT_TRUE(CheckArraySize(10));
+    EXPECT_TRUE(CheckArraySize(100));
+    EXPECT_TRUE(CheckArraySize(1000));
 }
 
 TEST(ValidationTest, InvalidSize) {
-    EXPECT_FALSE(ValidateArrayInput(0));
-    EXPECT_FALSE(ValidateArrayInput(-1));
-    EXPECT_FALSE(ValidateArrayInput(-100));
-    EXPECT_FALSE(ValidateArrayInput(10001));
+    EXPECT_FALSE(CheckArraySize(0));
+    EXPECT_FALSE(CheckArraySize(-1));
+    EXPECT_FALSE(CheckArraySize(-100));
+    EXPECT_FALSE(CheckArraySize(10001));
 }
 
 // Интеграционный тест с реальными потоками
