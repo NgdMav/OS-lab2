@@ -27,6 +27,8 @@ DWORD WINAPI MinMaxThread(LPVOID lpParam) {
             data->minValue = data->array[i];
             data->minIndex = i;
         }
+
+        Sleep(7);
         
         if (data->array[i] > data->maxValue) {
             data->maxValue = data->array[i];

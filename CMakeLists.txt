@@ -16,12 +16,12 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+# Основной исполняемый файл
 add_library(thread_lib STATIC
     src/thread_functions.cpp
     include/thread_functions.h
 )
 
-# Основной исполняемый файл
 add_executable(lab2_threads
     src/main.cpp
 )
